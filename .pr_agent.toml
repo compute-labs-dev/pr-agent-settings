@@ -1,0 +1,22 @@
+[pr_description]
+generate_ai_title=true
+
+[pr_code_suggestions]
+commitable_code_suggestions=true
+
+[github_app]
+pr_commands = [
+    "/describe --pr_description.final_update_message=false",
+    "/review --pr_reviewer.num_code_suggestions=0",
+    "/improve",
+    "/update_changelog",
+]
+
+handle_push_trigger = true
+push_commands = [
+    "/describe",
+    "/review  --pr_reviewer.num_code_suggestions=0 --pr_reviewer.final_update_message=false",
+]
+
+[pr_update_changelog]
+push_changelog_changes=true
